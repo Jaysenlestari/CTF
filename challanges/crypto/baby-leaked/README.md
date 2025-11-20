@@ -1,0 +1,29 @@
+# baby leaked
+
+by jay
+
+---
+
+## Flag
+
+```
+NETSOS{3x4ctly_wHy_w0u1d_y0u_l3ak_p4rT_0f_th3_pr1m3s_th1s_was_v3ry_e4sy_t0_br34k}
+```
+
+## Description
+Turns out Bob tried to secure his secrets with RSA... and then decided to "help" you by leaking a chunk of one of his primes. He definitely meant well.
+
+## Difficulty
+easy-medium
+
+## Tags
+RSA
+
+## Deployment
+- Run the container using:
+    ```
+    docker-compose up --build --detach
+    ```
+
+## Notes
+This challenge was initially designed for Pekan Ristek, an internal cybersecurity competition hosted by Ristek Fasilkom UI

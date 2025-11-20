@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card" style="text-align:center;">
+  <p class="pill">Login berhasil</p>
+  <h2>Selamat datang, {{ username }}.</h2>
+  <div class="hero-actions" style="justify-content:center;">
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Kembali ke beranda</a>
+    <a href="{{ url_for('review') }}" class="btn btn-secondary">Kirim review</a>
+  </div>
+</section>
+{% endblock %}

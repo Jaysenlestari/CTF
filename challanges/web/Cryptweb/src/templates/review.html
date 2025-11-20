@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="card">
+  <h2>Kirim Review</h2>
+  <p class="muted">Masukan Anda akan dibaca oleh admin.</p>
+
+  <form method="POST">
+    <div>
+      <label>Nama</label>
+      <input type="text" name="name" placeholder="Anonymous">
+    </div>
+    <div>
+      <label>Pesan</label>
+      <textarea name="message" required></textarea>
+    </div>
+    <button class="btn btn-primary">Kirim</button>
+  </form>
+</section>
+
+{% if review %}
+<section class="card" style="margin-top:2rem;">
+  <p class="pill">Review Anda</p>
+  <h3>{{ review.name }}</h3>
+
+  <div style="margin-top:1rem; background:var(--card-dark); padding:1rem; border-radius:12px;">
+    {{ review.message | safe }}
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

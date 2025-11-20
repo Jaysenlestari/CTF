@@ -1,0 +1,12 @@
+services:
+    baby-leaked:
+      build: .
+      ports:
+        - 8000:8080
+      container_name: baby-leaked
+      restart: on-failure
+      deploy:
+        resources:
+          limits:
+            cpus: '0.5'
+            memory: 256M

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <p class="pill">Admin</p>
+  <h2>Daftar Review</h2>
+  <p class="muted">Ringkasan review yang masuk.</p>
+
+  <table style="width:100%; border-collapse:collapse; margin-top:1.5rem;">
+    <thead>
+      <tr style="border-bottom:1px solid var(--border);">
+        <th style="text-align:left; padding:0.5rem;">ID</th>
+        <th style="text-align:left; padding:0.5rem;">Nama</th>
+        <th style="text-align:left; padding:0.5rem;">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in reviews %}
+      <tr style="border-bottom:1px solid rgba(148,163,184,0.15);">
+        <td style="padding:0.5rem;">{{ r.id }}</td>
+        <td style="padding:0.5rem;">{{ r.name }}</td>
+        <td style="padding:0.5rem;">
+          <a href="{{ url_for('review', uuid=r.uuid) }}">/review?uuid={{ r.uuid }}</a>
+        </td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="3" class="muted" style="padding:0.75rem;">Belum ada review.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

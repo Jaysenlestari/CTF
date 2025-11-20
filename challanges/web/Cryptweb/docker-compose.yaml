@@ -1,0 +1,64 @@
+version: '3'
+
+services:
+
+  web:
+    build: ./src
+    container_name: football_web
+    restart: always
+    environment:
+      FLAG: NETSOS{1s3ng_nyobA_w3b_gAbung_crypt0d_ternyA7A_s3rU_jUgAAa}
+      DATABASE_PATH: /data/football.db
+      ADMIN_USERNAME: botadmin
+      ADMIN_PASSWORD: botadmin123!
+    volumes:
+      - webdata:/data
+    networks:
+      - internal
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 512M
+
+  proxy:
+    image: nginx:latest
+    container_name: football_proxy
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./proxy.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - internal
+    depends_on:
+      - web
+
+  bot:
+    build:
+      context: ./bot
+      args:
+        - BROWSER=chromium
+    container_name: football_bot
+    restart: always
+    environment:
+      APPNAME: Admin
+      APPURL: http://proxy/
+      APPURLREGEX: '^http(|s)://.*$'
+      APPFLAG: NETSOS{1s3ng_nyobA_w3b_gAbung_crypt0d_ternyA7A_s3rU_jUgAAa}
+      APPLIMIT: 5
+      APPLIMITTIME: 60
+      USE_PROXY: 0
+      HEADLESS: 1
+      ADMIN_USERNAME: botadmin
+      ADMIN_PASSWORD: botadmin123!
+    ports:
+      - "3000:3000"
+    networks:
+      - internal
+
+networks:
+  internal:
+
+volumes:
+  webdata:

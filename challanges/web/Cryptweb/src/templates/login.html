@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <p class="pill">Login</p>
+  <h2>Masuk ke akun</h2>
+  <p class="muted">Setelah login, browser Anda akan mendapatkan cookie sesi yang bisa diperiksa di DevTools.</p>
+
+  <form method="POST" autocomplete="off">
+    <div>
+      <label for="username">Username</label>
+      <input id="username" name="username" required>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" required>
+    </div>
+    <div>
+      <button class="btn btn-primary" type="submit">Login</button>
+    </div>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Buat Akun</h2>
+
+  <form method="POST">
+    <label>Username</label>
+    <input type="text" name="username" minlength="3" maxlength="32" required>
+
+    <label>Password</label>
+    <input type="password" name="password" minlength="4" required>
+
+    <button class="btn btn-primary" style="margin-top:1rem;">Daftar</button>
+  </form>
+</section>
+{% endblock %}

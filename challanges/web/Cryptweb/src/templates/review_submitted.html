@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card" style="text-align:center;">
+  <p class="pill">Terkirim</p>
+  <h2>Review berhasil dikirim</h2>
+  <p class="muted">Kirim URL berikut ke admin melalui /report</p>
+
+  <pre style="margin-top:1rem;">{{ review_url }}</pre>
+
+  <a href="{{ url_for('review') }}" class="btn btn-secondary">Kembali</a>
+</section>
+{% endblock %}

@@ -1,0 +1,12 @@
+services:
+  web:
+    build: ./src
+    ports:
+      - '7302:5000'
+    environment:
+      - FLASK_ENV=production
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "512M"
