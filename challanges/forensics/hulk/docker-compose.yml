@@ -1,0 +1,6 @@
+services:
+  for-hulk:
+    build: .
+    restart: always
+    ports:
+      - "8889:8889"

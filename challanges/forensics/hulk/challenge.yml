@@ -2,7 +2,7 @@
 # other tools to install and deploy your challenge.
 
 # Required sections
-name: "lari ada tikus"
+name: "HULK"
 author: "jay"
 
 # Select a category from:
@@ -20,16 +20,17 @@ category: forensics
 # Constants:
 # {{ IP_SERVER }} to get service IP address
 # {{ PORT }} to get service port
-description: "Siuuuuuuuuuu.........
-
-notes : Flag must be wrapped in COMPFEST17{}, all letters inside the flag uses only uppercase letters"
+description: "HULKKKKKKKK SMASHHHHHHHHH!!!!!!!!!
+  https://drive.google.com/drive/folders/14Sd9XDlC8eHirrg2oohws_ooy1e9a2t6?usp=sharing
+  password : 535dae82f61b8b56214c3d862b30a859
+  http://{{ IP_SERVER }}:{{ PORT }}/"
 
 # Flags specify answers that your challenge use. You should generally provide
 # at least one.
 # Can be removed if unused
 # Accepts strings or dictionaries
 flags:
-  - COMPFEST17{KOKMORSEADADICTFKIRAINHANYAADADIPRAMUKA}
+  - NETSOS{bu1k_3xtrac7orrr_15_v3rY_p0w3rfu1111}
   - { type: "static", content: "NETSOS{another_flag}", data: "case_insensitive" }
 
 # Tags are used to classify your challenge with topics. You should provide at
@@ -37,9 +38,9 @@ flags:
 # Can be removed if unused
 # Accepts strings
 tags:
-  - forensics
-  - binwalk
-  - morse
+  - ransomware
+  - memdump
+  - bulk extractor
 
 # Hints are used to give players a way to buy or have suggestions. They are not
 # required but can be nice.

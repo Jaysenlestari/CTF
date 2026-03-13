@@ -1,22 +1,51 @@
+# 🐉 Jay’s CTF Playground
+### Cybersecurity Challenge Development
 
-# 🐉 Jay’s CTF Playground  
-**Collection of Challenges & Writeups**
+Hi! I'm **Jaysen Lestari**, a Computer Science student at **Universitas Indonesia** with a strong passion for **cybersecurity**, especially in **CTF competitions**, **digital forensics**, **web exploitation**, and **cryptography**.
 
-Hi! I’m **Jaysen Lestari**, a Computer Science student at **Universitas Indonesia** with strong passion for cybersecurity — especially through **CTF competitions**, **digital forensics**, **web exploitation** and **cryptography**.
+This repository contains a collection of **CTF challenges that I designed and developed** for various events such as **Pekan Ristek 2025**, **RISTEK 2026 Open Recruitment**, and **COMPFEST17**.
 
-This repository contains two main directories:
+Each challenge typically includes:
 
-- **`challenges/`**  
-  A collection of CTF challenges I’ve created for various events, including  
-  **Pekan Ristek** and **COMPFEST 17**.  
-  I enjoy building fun, layered, and occasionally evil problems in **forensics**, **web exploitation**, and **cryptography**.
+- **public/** → files given to participants  
+- **src/** → challenge source / generation scripts  
+- **writeup/** → intended solution and explanation  
 
-- **`writeup/`**  
-  Writeups from the competitions I’ve joined.  
-  These documents show my thought process, the techniques I used, and sometimes the pain I went through.
+This repository serves as my **personal challenge development archive**, where I design layered problems inspired by real-world scenarios and modern attack techniques.
 
-This repo serves as my personal cybersecurity playground — a place to track my growth, archive my creations, and share knowledge with anyone who loves CTF as much as I do.
+---
 
-Feel free to explore, learn, or take inspiration (responsibly!) from the challenges and writeups inside.
+# 📂 Repository Structure
+```
+challanges/
+├── crypto
+├── forensics
+└── web
+```
+
+Each category contains multiple challenges.
+
+---
+
+# 🧩 Challenges
+
+| Category  | Challenge             | Difficulty  | Description                                                                                                                                                                                           | Link                                           |
+| --------- | --------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Forensics | Dear bf               | Beginner    | Simple file recovery challenge. Participants brute-force a ZIP password using `rockyou` and repair corrupted file signatures to recover the flag.                                                     | [Open](./challanges/forensics/Dear%20bf)       |
+| Forensics | mimpi                 | Beginner    | Network traffic analysis challenge where a binary file is reconstructed from WebSocket traffic inside a PCAP and extracted from a password-protected ZIP archive.                                     | [Open](./challanges/forensics/mimpi)           |
+| Forensics | p-info                | Easy     | EVTX log analysis challenge involving suspicious Base64 data exfiltration. Participants reconstruct a PDF and analyze embedded obfuscated JavaScript to recover multiple flag parts.                  | [Open](./challanges/forensics/p-info)          |
+| Forensics | hulk                  | Easy-Medium      | Memory forensics challenge using **Volatility** to recover artifacts from Linux memory. Players reconstruct encrypted files, extract AES keys, and reverse an associated binary.                      | [Open](./challanges/forensics/hulk)            |
+| Forensics | nyawit                | Medium | Multi-layer Windows forensic investigation combining **registry analysis, EVTX logs, browser history, $J journal, prefetch artifacts**, and malware analysis to reconstruct attacker activity.        | [Open](./challanges/forensics/nyawit)          |
+| Forensics | update-required       | Hard   | Full attack-chain investigation involving **PCAP analysis, ransomware reverse engineering, AES decryption, clipboard forensics, and MetaMask vault recovery** to unlock the final encrypted document. | [Open](./challanges/forensics/update-required) |
+| Web       | Cryptweb              | Medium        | Stored XSS leads to exfiltration of internal configuration data. Players must combine **XSS, AES-CBC bit-flipping, and HMAC forgery** to forge an admin session cookie and access `/admin/dashboard`. | [Open](./challanges/web/Cryptweb)              |
+| Web       | dark-side-of-asteroid | Easy       | Web exploitation challenge combining **DNS rebinding**, localhost access bypass, and **SQL injection** to exploit an internal admin search endpoint through an admin bot.                             | [Open](./challanges/web/dark-side-of-asteroid) |
+| Crypto    | baby-leaked           | Easy–Medium | RSA challenge with partial prime leakage. Players must recover the missing bits of `p` using **Coppersmith’s small root attack** and handle a non-coprime public exponent (`e = 16`).                 | [Open](./challanges/crypto/baby-leaked)        |
+
+---
+
+# 🔗 Connect With Me
+
+- LinkedIn: http://www.linkedin.com/in/jaysen-lestari
+- Blog: https://jaysenlestari.github.io/
 
 Happy hacking! 🦊🔐

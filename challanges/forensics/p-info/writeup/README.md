@@ -1,4 +1,4 @@
-# Writeup <Judul Soal>
+# Writeup <p-info>
 Disini diberikan file evtx, tinggal cari event dengan src ShellOps karena itu sangat mencurigakan terlihat bahwa adanya data-data yang dikirim dalam base64 yang terdiri dari part1-part50, masing-masing part terdiri dari 5 part chunk, dump semua data tersebut kemudian gabung dan decode dari base64, maka kamu akan menemukan file pdf nya. Part1 dari flag akan ditemukan dalam pdf tersebut.
 Part2 dari flag dengan melakukan command `pdfinfo -js file_name`, akan ditemukan script js yang telah diobfuscated dengan memakai obfuscator.io, lakukan deobfuscated dan akan mendapatkan :
 ```javascript

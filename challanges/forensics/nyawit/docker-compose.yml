@@ -1,0 +1,6 @@
+services:
+  for-nyawit:
+    build: .
+    restart: always
+    ports:
+      - "8888:8888"
